@@ -5,6 +5,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import java.time.LocalDate;
+import java.util.List;
 
 @Configuration
 public class StudentConfig {
@@ -21,10 +22,14 @@ public class StudentConfig {
             );
 
             Student Renata = new Student(
-                    "Alex Padilha",
+                    "Renata Padilha",
                     21,
                     LocalDate.of(1999, 1, 30),
                     "renata.padilham@gmail.com"
+            );
+
+            repository.saveAll(
+                    List.of(Matheus, Renata)
             );
 
         };
